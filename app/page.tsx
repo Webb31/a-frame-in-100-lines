@@ -20,7 +20,7 @@ const frameMetadata = getFrameMetadata({
   input: {
     text: 'Paste link',
   },
-  postUrl: `${NEXT_PUBLIC_URL}/api/frame`,
+  postUrl: `https://a-frame-in-100-lines-teal.vercel.app/api/frame`,
 });
 
 export const metadata: Metadata = {
