@@ -34,12 +34,12 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
     getFrameHtmlResponse({
       buttons: [
         {
-          label: `State: ${state?.page || 0}`,
+          label: `Test: ${state?.page || 0}`,
         },
         {
           action: 'link',
           label: 'OnchainKit',
-          target: 'https://onchainkit.xyz',
+          target: text,
         },
         {
           action: 'post_redirect',
