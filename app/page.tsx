@@ -16,7 +16,6 @@ const frameMetadata = getFrameMetadata({
   ],
   image: {
     src: `https://zd56xv.csb.app/Base_Warpcast_files/CryptoMakesMoneyFasterWhyCryptowithBrianArmstrong.gif`,
-    aspectRatio: '1:1',
   },
   input: {
     text: 'Paste link',
