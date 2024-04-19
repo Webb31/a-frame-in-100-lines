@@ -10,10 +10,7 @@ const frameMetadata = getFrameMetadata({
       target: `https://youtu.be/LRVJRXMAp2g?si=yAzlPNlZzghNlQlw`,
     },
     {
-      action: 'tx',
       label: 'Verify',
-      target: `${NEXT_PUBLIC_URL}/api/tx`,
-      postUrl: `${NEXT_PUBLIC_URL}/api/tx-success`,
     },
   ],
   image: {
