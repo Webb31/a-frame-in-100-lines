@@ -18,7 +18,6 @@ const frameMetadata = getFrameMetadata({
   ],
   image: {
     src: `https://zd56xv.csb.app/Base_Warpcast_files/CryptoMakesMoneyFasterWhyCryptowithBrianArmstrong.gif`,
-    target: `https://youtu.be/LRVJRXMAp2g?si=yAzlPNlZzghNlQlw`,
   },
   postUrl: `${NEXT_PUBLIC_URL}/api/frame`,
 });
