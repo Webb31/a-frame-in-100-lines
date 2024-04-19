@@ -5,7 +5,9 @@ import { NEXT_PUBLIC_URL } from './config';
 const frameMetadata = getFrameMetadata({
   buttons: [
     {
+      action: 'link',
       label: 'Open Link',
+      target: `https://youtu.be/LRVJRXMAp2g?si=yAzlPNlZzghNlQlw`,
     },
     {
       action: 'tx',
@@ -16,11 +18,9 @@ const frameMetadata = getFrameMetadata({
   ],
   image: {
     src: `https://zd56xv.csb.app/Base_Warpcast_files/CryptoMakesMoneyFasterWhyCryptowithBrianArmstrong.gif`,
+    target: `https://youtu.be/LRVJRXMAp2g?si=yAzlPNlZzghNlQlw`,
   },
-  input: {
-    text: 'Paste link',
-  },
-  postUrl: `https://a-frame-in-100-lines-teal.vercel.app/api/frame`,
+  postUrl: `${NEXT_PUBLIC_URL}/api/frame`,
 });
 
 export const metadata: Metadata = {
