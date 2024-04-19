@@ -10,7 +10,6 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
     return new NextResponse('Message not valid', { status: 500 });
   }
 
-  const text = message.input || '';
   let state = {
     page: 0,
   };
@@ -25,7 +24,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
    */
   if (message?.button === 3) {
     return NextResponse.redirect(
-      text,
+      `${NEXT_PUBLIC_URL}/api/frame`,
       { status: 302 },
     );
   }
@@ -39,7 +38,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
         {
           action: 'link',
           label: 'OnchainKit',
-          target: text,
+          target: `${NEXT_PUBLIC_URL}/api/frame`,
         },
         {
           action: 'post_redirect',
