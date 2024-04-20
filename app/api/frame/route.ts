@@ -10,16 +10,6 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
     return new NextResponse('Message not valid', { status: 500 });
   }
 
-  /**
-   * Use this code to redirect to a different page
-   */
-  if (message?.button === 3) {
-    return NextResponse.redirect(
-      `${NEXT_PUBLIC_URL}/api/frame`,
-      { status: 302 },
-    );
-  }
-
   return new NextResponse(
     getFrameHtmlResponse({
       buttons: [
