@@ -12,7 +12,6 @@ const frameMetadata = getFrameMetadata({
       action: 'link',
       label: 'Open Link',
       target: `https://youtu.be/LRVJRXMAp2g?si=yAzlPNlZzghNlQlw`,
-      postUrl: `${NEXT_PUBLIC_URL}/api/frame`,
     },
   ],
   image: {
