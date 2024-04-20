@@ -33,26 +33,18 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
     getFrameHtmlResponse({
       buttons: [
         {
-          label: `Test: ${state?.page || 0}`,
+          label: 'Verify',
         },
         {
           action: 'link',
-          label: 'OnchainKit',
-          target: `${NEXT_PUBLIC_URL}/api/frame`,
-        },
-        {
-          action: 'post_redirect',
           label: 'Open Link',
+          target: `https://youtu.be/LRVJRXMAp2g?si=yAzlPNlZzghNlQlw`,
         },
       ],
       image: {
-        src: 'https://zd56xv.csb.app/Base_Warpcast_files/CryptoMakesMoneyFasterWhyCryptowithBrianArmstrong.gif',
+        src: `https://zd56xv.csb.app/Base_Warpcast_files/CryptoMakesMoneyFasterWhyCryptowithBrianArmstrong.gif`,
       },
       postUrl: `${NEXT_PUBLIC_URL}/api/frame`,
-      state: {
-        page: state?.page + 1,
-        time: new Date().toISOString(),
-      },
     }),
   );
 }
