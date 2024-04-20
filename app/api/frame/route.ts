@@ -10,15 +10,6 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
     return new NextResponse('Message not valid', { status: 500 });
   }
 
-  let state = {
-    page: 0,
-  };
-  try {
-    state = JSON.parse(decodeURIComponent(message.state?.serialized));
-  } catch (e) {
-    console.error(e);
-  }
-
   /**
    * Use this code to redirect to a different page
    */
