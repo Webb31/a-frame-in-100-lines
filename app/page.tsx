@@ -6,7 +6,6 @@ const frameMetadata = getFrameMetadata({
   buttons: [
     {
       label: 'Verify',
-      postUrl: `${NEXT_PUBLIC_URL}/api/post`,
     },
     {
       action: 'link',
@@ -17,6 +16,7 @@ const frameMetadata = getFrameMetadata({
   image: {
     src: `https://zd56xv.csb.app/Base_Warpcast_files/CryptoMakesMoneyFasterWhyCryptowithBrianArmstrong.gif`,
   },
+  postUrl: `${NEXT_PUBLIC_URL}/api/post`,
 });
 
 export const metadata: Metadata = {
