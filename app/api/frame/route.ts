@@ -8,6 +8,8 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
 
   if (!isValid) {
     return new NextResponse('Message not valid', { status: 500 });
+  } else {
+    return new NextResponse('Hello from the post route', { status: 200 });
   }
 
   return new NextResponse(
@@ -25,7 +27,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
       image: {
         src: `https://zd56xv.csb.app/Base_Warpcast_files/CryptoMakesMoneyFasterWhyCryptowithBrianArmstrong.gif`,
       },
-      postUrl: `${NEXT_PUBLIC_URL}/api/post`,
+      postUrl: `${NEXT_PUBLIC_URL}/api/frame`,
     }),
   );
 }

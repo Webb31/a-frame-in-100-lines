@@ -16,7 +16,7 @@ const frameMetadata = getFrameMetadata({
   image: {
     src: `https://zd56xv.csb.app/Base_Warpcast_files/CryptoMakesMoneyFasterWhyCryptowithBrianArmstrong.gif`,
   },
-  postUrl: `${NEXT_PUBLIC_URL}/api/post`,
+  postUrl: `${NEXT_PUBLIC_URL}/api/frame`,
 });
 
 export const metadata: Metadata = {
