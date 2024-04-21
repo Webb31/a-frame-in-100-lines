@@ -10,9 +10,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
 
   const EASContractAddress = "0x4200000000000000000000000000000000000021";
   const eas = new EAS(EASContractAddress);
-  const provider = ethers.getDefaultProvider(
-    "sepolia"
-  );
+  const provider = ethers.getDefaultProvider("sepolia");
   eas.connect(provider);
 
   const uid = "0xea40915a79a6c699658e225db836ce2cbe09f55aa22e0e4b0e64377bdd78b6ae";
