@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { NEXT_PUBLIC_URL } from '../../config';
 import { getEASAttestations } from '@coinbase/onchainkit/identity';
 import { createPublicClient, http } from 'viem';
-import { baseSepolia } from 'viem/chains';
+import { base } from 'viem/chains';
 
 async function getResponse(req: NextRequest): Promise<NextResponse> {
   const body: FrameRequest = await req.json();
@@ -13,7 +13,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
     schemas: ['0x67f4ef704a08dfb74df8d9191b059ac9515fb5f8ffe83529a342958397fa732c'],
   };
 
-  const attestations = await getEASAttestations(address, baseSepolia, attestationsOptions);
+  const attestations = await getEASAttestations(address, base, attestationsOptions);
   console.log(attestations);
 
   if (!isValid) {
