@@ -1,28 +1,23 @@
 import { FrameRequest, getFrameMessage, getFrameHtmlResponse } from '@coinbase/onchainkit/frame';
 import { NextRequest, NextResponse } from 'next/server';
 import { NEXT_PUBLIC_URL } from '../../config';
-import { Avatar } from '@coinbase/onchainkit/identity';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { getEASAttestations } from '@coinbase/onchainkit/identity';
+import { base } from 'viem/chains';
 
 async function getResponse(req: NextRequest): Promise<NextResponse> {
   const body: FrameRequest = await req.json();
   const { isValid, message } = await getFrameMessage(body, { neynarApiKey: 'NEYNAR_ONCHAIN_KIT' });
-  const queryClient = new QueryClient();
+  const address = '0x596b8eeDe78d360c9484f715919038F3d27fc8Df';
+  const attestationsOptions = {
+    schemas: ['0x67f4ef704a08dfb74df8d9191b059ac9515fb5f8ffe83529a342958397fa732c'],
+  };
+
+  const attestations = await getEASAttestations(address, base, attestationsOptions);
+  console.log(attestations);
 
   if (!isValid) {
     return new NextResponse('Message not valid', { status: 500 });
   }
-
-  function App() {
-    return (
-      // Provide the client to your App
-      <QueryClientProvider client={queryClient}>
-        <Avatar address="0x596b8eeDe78d360c9484f715919038F3d27fc8Df" />
-      </QueryClientProvider>
-    );
-  }
-
-  console.log(App);
   
   return new NextResponse(
     getFrameHtmlResponse({

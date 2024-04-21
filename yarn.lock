@@ -439,7 +439,7 @@ undici@^5.8.1:
   dependencies:
     "@fastify/busboy" "^2.0.0"
 
-viem@^2.7.0, viem@^2.7.1, viem@^2.7.14:
+viem@^2.7.0, viem@^2.7.14, viem@^2.9.23:
   version "2.9.23"
   resolved "https://registry.npmjs.org/viem/-/viem-2.9.23.tgz"
   integrity sha512-KolNI8H8tNkOA6xkC5UnlQjoorJxk4F1F9h42pHnH9/CtrWG9Ka4xmAWwhO2xKNPA2sNsAsJLmedBsz2uvaQow==
