@@ -11,7 +11,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
   const schemaUID = "0x67f4ef704a08dfb74df8d9191b059ac9515fb5f8ffe83529a342958397fa732c";
   const eas = new EAS(easContractAddress);
   // Signer must be an ethers-like signer.
-  await eas.connect(signer);
+  await eas.connect("0x596b8eeDe78d360c9484f715919038F3d27fc8Df");
   // Initialize SchemaEncoder with the schema string
   const schemaEncoder = new SchemaEncoder("string URL");
   const encodedData = schemaEncoder.encodeData([
