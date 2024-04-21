@@ -8,7 +8,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
   const body: FrameRequest = await req.json();
   const { isValid, message } = await getFrameMessage(body, { neynarApiKey: 'NEYNAR_ONCHAIN_KIT' });
 
-  export const EASContractAddress = "0x4200000000000000000000000000000000000021";
+  const EASContractAddress = "0x4200000000000000000000000000000000000021";
   const eas = new EAS(EASContractAddress);
   const provider = ethers.getDefaultProvider(
     "sepolia"
