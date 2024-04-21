@@ -13,7 +13,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
 //    schemas: ['0x67f4ef704a08dfb74df8d9191b059ac9515fb5f8ffe83529a342958397fa732c'],
 //  };
 
-  const attestations = await getEASAttestations(address, base, null);
+  const attestations = await getEASAttestations(address, base);
   console.log(attestations);
 
   if (isValid) {
