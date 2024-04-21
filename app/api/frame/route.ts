@@ -2,7 +2,8 @@ import { FrameRequest, getFrameMessage, getFrameHtmlResponse } from '@coinbase/o
 import { NextRequest, NextResponse } from 'next/server';
 import { NEXT_PUBLIC_URL } from '../../config';
 import { getEASAttestations } from '@coinbase/onchainkit/identity';
-import { base } from 'viem/chains';
+import { createPublicClient, http } from 'viem';
+import { baseSepolia } from 'viem/chains';
 
 async function getResponse(req: NextRequest): Promise<NextResponse> {
   const body: FrameRequest = await req.json();
